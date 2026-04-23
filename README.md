@@ -298,7 +298,8 @@ Open `schema.svg` in a browser or SVG viewer.
 > **Screenshot 2:** Take a screenshot of `schema.svg` open in your browser,
 > showing all five entities and all four relationships, and insert it here.
 >
-> `[insert screenshot]`
+> `[insert screenshot]`  <img width="1920" height="1020" alt="لقطة شاشة 2026-04-23 211036" src="https://github.com/user-attachments/assets/a0f5a58a-3650-4b78-a50f-58429ba54b07" />
+
 
 Once the diagram looks correct, tell Git to ignore the generated artifact.
 The workflow will recreate it on every release:
