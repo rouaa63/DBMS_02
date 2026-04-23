@@ -218,20 +218,23 @@ git commit -m "feat: complete ER schema for library management"
 ellipses). PlantUML uses Crow's Foot notation. Describe one concrete difference
 in how an N:M relationship is represented in each notation.
 
-> *Your answer:*
+> *Your answer:*  In Chen notation, an N:M relationship is represented using a separate diamond-shaped relationship between entities.
+In Crow’s Foot notation (PlantUML), the relationship is shown directly as a line between entities with cardinality symbols, without a separate relationship entity.
 
 **Question 2.2:** What would happen if you wrote `@startuml Library` instead of
 `@startuml` at the top of `schema.puml`? Try it locally (`plantuml -tsvg schema.puml`)
 and observe the output filename. Why would this break the workflow?
 
-> *Your answer:*
+> *Your answer:*  If @startuml Library is used instead of @startuml, PlantUML will generate a file named Library.svg instead of schema.svg.
+This would break the workflow because it expects a file specifically named schema.svg.
 
 **Question 2.3:** The `Author`–`Book` relationship is N:M. Does your PlantUML
 diagram require you to model the intermediate join table explicitly, or does
 PlantUML abstract it away? At which stage of the design process would the join
 table appear?
 
-> *Your answer:*
+> *Your answer:*  PlantUML abstracts the N:M relationship and does not require modeling the intermediate join table explicitly.
+The join table appears later during the logical or physical database design stage.
 
 ---
 
@@ -327,13 +330,14 @@ git commit -m "chore: ignore generated SVG artifact"
 Name one shell command you could use to check the exit code of the last command
 and verify that the render succeeded, without opening the SVG file.
 
-> *Your answer:*
+> *Your answer:*  A command to check the exit code is: echo $? If the result is 0, the previous command was successful.   
 
 **Question 3.2:** Delete `schema.svg` and run `plantuml -tsvg schema.puml` again.
 Then run `git status`. Is `schema.svg` shown as an untracked file? Explain why
 or why not.
 
-> *Your answer:*
+> *Your answer:*  No, schema.svg is not shown as an untracked file.
+This is because it is listed in .gitignore, so Git ignores it.
 
 ---
 
