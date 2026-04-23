@@ -21,7 +21,7 @@ entity "Book" as B {
   --
   Title               : VARCHAR(200)
   PublicationYear     : INTEGER
-  Gerne               : VARCHAR(50)                      }
+  Genre               : VARCHAR(50)                      }
 
 entity "Author" as A {
   * AuthorID          : INTEGER     <<PK>>
