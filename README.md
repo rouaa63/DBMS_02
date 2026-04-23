@@ -417,12 +417,14 @@ git tag
 **Question 4.1:** Run `git push origin main`. Then open the **Actions** tab in
 your fork on GitHub. Did any workflow run trigger? Explain why or why not.
 
-> *Your answer:*
+> *Your answer:* No workflow is triggered.
+The workflow only runs on tag pushes (v*), not on pushes to the main branch.
 
 **Question 4.2:** Run `git tag -v v1.0.0`. What information is shown that
 `git tag` alone does not display? What does the `-v` flag verify?
 
-> *Your answer:*
+> *Your answer:* git tag -v v1.0.0 shows additional information such as author, date, and message.
+The -v flag verifies the authenticity of the tag (e.g., GPG signature).
 
 ---
 
@@ -565,14 +567,16 @@ git commit -m "ci: render PlantUML schema and publish GitHub Release on tag"
 if you replaced it with `on: push: branches: ['main']`? Would the release
 workflow still make sense? Why or why not?
 
-> *Your answer:*
+> *Your answer:* If changed to on: push: branches: ['main'], the workflow would run on every commit.
+This is not suitable for releases, since releases should only be triggered for version tags.
 
 **Question 5.2:** The step `apt-get install plantuml` takes roughly 20–30 seconds
 on every run. In a larger team with many releases per day, this adds up. Name
 one GitHub Actions mechanism that could eliminate this installation time on
 repeated runs.
 
-> *Your answer:*
+> *Your answer:* One solution is using caching in GitHub Actions.
+Another is using a prebuilt environment or Docker image with PlantUML already installed.
 
 ---
 
@@ -621,14 +625,16 @@ Once the workflow has completed, navigate to **Releases** in the right sidebar.
 Which takes longer, and by approximately what factor? What does this suggest
 about where optimisation effort should be directed?
 
-> *Your answer:*
+> *Your answer:* The "Install PlantUML" step takes significantly longer than the "Render SVG" step, by roughly a factor of 10.
+This suggests optimization should focus on reducing installation time.
 
 **Question 6.2:** Download `schema.svg` from the Release page and compare it
 to the `schema.svg` you rendered locally with `plantuml -tsvg schema.puml`.
 Are they identical? What does this tell you about the reproducibility of the
 build process?
 
-> *Your answer:*
+> *Your answer:* Yes, they are identical.
+This shows that the build process is reproducible and consistent across environments.
 
 ---
 
@@ -642,7 +648,8 @@ your schema. What would be different if you had stored the diagram as a
 `.drawio` file or a PNG instead of a `.puml` file? What information would you
 lose?
 
-> *Your answer:*
+> *Your answer:* With binary files like PNG or drawio, Git cannot show meaningful differences between versions.
+You lose visibility into what exactly changed.
 
 **Question B – Collaboration:**
 Imagine two people editing `schema.puml` simultaneously on separate branches –
@@ -650,14 +657,16 @@ one adds a `Genre` entity, the other corrects a cardinality. When they merge,
 Git can show a textual diff of the conflict. Would this be possible with a
 binary diagram file? What practical consequence does this have for a team?
 
-> *Your answer:*
+> *Your answer:* No, this is not possible with binary files.
+This makes collaboration harder because conflicts cannot be clearly reviewed or resolved.
 
 **Question C – Tag vs. branch for releases:**
 You tagged a specific commit as `v1.0.0` rather than pushing to a branch called
 `release`. What guarantee does an annotated tag offer that a branch cannot?
 Under what circumstance would someone want to use a branch instead?
 
-> *Your answer:*
+> *Your answer:* An annotated tag always points to a fixed, immutable commit.
+A branch can change over time. A branch is used when ongoing updates are needed.
 
 **Question D – The value of CI for documentation:**
 Before this exercise, updating a diagram meant: edit the source, export an
@@ -665,7 +674,8 @@ image, commit the image, hope the export matched the source. Describe in two
 sentences what the CI pipeline eliminates, and what new guarantee it provides
 instead.
 
-> *Your answer:*
+> *Your answer:* The CI pipeline removes the need to manually export and update diagrams.
+It ensures that the released diagram is always generated automatically from the latest source.
 
 > **Screenshot 6:** Take a screenshot of your terminal showing
 > `git log --oneline` with all commits from this exercise visible, then open
