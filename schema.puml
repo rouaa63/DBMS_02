@@ -21,7 +21,7 @@ entity "Book" as B {
   --
   Title               : VARCHAR(200)
   PublicationYear     : INTEGER
-}
+  Gerne               : VARCHAR(50)                      }
 
 entity "Author" as A {
   * AuthorID          : INTEGER     <<PK>>
@@ -36,6 +36,7 @@ entity "Copy" as C {
   --
   ShelfLocation       : VARCHAR(30)
   Condition           : VARCHAR(20)
+      Status          : VARCHAR(20)   
 }
 
 entity "Member" as M {
