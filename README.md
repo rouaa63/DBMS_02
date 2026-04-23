@@ -401,7 +401,8 @@ git tag
 > **Screenshot 3:** Take a screenshot of `git log --oneline -5` showing your
 > commits in order, and insert it here.
 >
-> `[insert screenshot]`
+> `[insert screenshot]`   <img width="1920" height="1020" alt="لقطة شاشة 2026-04-23 211323" src="https://github.com/user-attachments/assets/87e747e4-1b23-4b67-afbd-933b196e7ddb" />
+
 
 > **Caveat:** Tags are not pushed automatically with `git push origin main`.
 > You must push them explicitly. Forgetting this step means the workflow never
