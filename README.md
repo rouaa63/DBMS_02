@@ -1,3 +1,4 @@
+<img width="1920" height="1020" alt="لقطة شاشة 2026-04-23 204335" src="https://github.com/user-attachments/assets/57e4d416-fef8-4d4d-8d49-7a16be7a5376" />
 ![DBMS_02 – ER Schema as Code](assets/header.svg)
 
 # DBMS_02 – ER Schema as Code: PlantUML & GitHub Releases
@@ -65,7 +66,8 @@ git --version
 > **Screenshot 1:** Take a screenshot of your terminal showing all three
 > successful version checks and insert it here.
 >
-> `[insert screenshot]`
+> `[insert screenshot]`   <img width="1920" height="1020" alt="لقطة شاشة 2026-04-23 204335" src="https://github.com/user-attachments/assets/0a1f4a4e-536f-4093-9cf0-69b5ae4e79b5" />
+
 
 ---
 
