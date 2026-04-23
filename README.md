@@ -682,7 +682,8 @@ It ensures that the released diagram is always generated automatically from the 
 > `schema.svg` from the Release in the same browser window alongside it.
 > Capture both in one screenshot and insert it here.
 >
-> `[insert screenshot]`   <img width="1920" height="1080" alt="لقطة شاشة 2026-04-23 222254" src="https://github.com/user-attachments/assets/be4cb0da-d4c6-4527-a5c6-781c448915a5" />
+> `[insert screenshot]`  <img width="1920" height="1080" alt="لقطة شاشة 2026-04-23 232612" src="https://github.com/user-attachments/assets/45788db7-5c7c-4d85-8c38-46cef6a8b134" />
+
 
 
 ---
