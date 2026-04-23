@@ -717,7 +717,8 @@ instead.
    > **Screenshot 7:** Take a screenshot of your extended `schema.svg` and the
    > corresponding GitHub Release page, and insert it here.
    >
-   > `[insert screenshot]`
+   > `[insert screenshot]`<img width="1920" height="1080" alt="لقطة شاشة 2026-04-23 223310" src="https://github.com/user-attachments/assets/6022fb4c-842a-4815-8c6a-de2e54cb550b" />
+
 
 ---
 
