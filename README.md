@@ -606,7 +606,8 @@ Once the workflow has completed, navigate to **Releases** in the right sidebar.
 > release title, the release notes, and the `schema.svg` download link, and
 > insert it here.
 >
-> `[insert screenshot]`
+> `[insert screenshot]`   <img width="1920" height="1020" alt="لقطة شاشة 2026-04-23 214921" src="https://github.com/user-attachments/assets/49378579-922a-4b3e-8b46-a0993a2075f0" />
+ 
 
 ### Questions for Task 6
 
